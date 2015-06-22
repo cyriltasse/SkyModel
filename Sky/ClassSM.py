@@ -269,7 +269,7 @@ class ClassSM():
         self.SourceCat.Select=M.Start()
 
     def BuildClusterCat(self):
-        ClusterCat=np.zeros((len(self.Dirs),),dtype=[('Name','|S200'),('ra',np.float),('dec',np.float),('SumI',np.float),("Cluster",int)])
+        ClusterCat=np.zeros((len(self.Dirs),),dtype=[('Name','|S200'),('ra',np.float),('dec',np.float),('l',np.float),('m',np.float),('SumI',np.float),("Cluster",int)])
         ClusterCat=ClusterCat.view(np.recarray)
         icat=0
         for d in self.Dirs:
