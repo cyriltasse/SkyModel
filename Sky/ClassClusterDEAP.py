@@ -274,18 +274,18 @@ class ClassPlotMachine():
         pylab.clf()
         pylab.subplot(2,2,1)
         pylab.hist(fluxPerFacet,bins=100)
-
+        pylab.xlabel("Flux /facet")
         pylab.subplot(2,2,2)
         pylab.hist(aspectRatioPerFacet,bins=100)
+        pylab.xlabel("Facet aspect ratio")
 
         pylab.subplot(2,2,3)
         pylab.hist(NPerFacet,bins=100)
+        pylab.xlabel("Number src/facet")
 
         pylab.subplot(2,2,4)
         pylab.hist(meanDistancePerFacet,bins=100)
-
-
-
+        pylab.xlabel("Mean distance /facet")
             
         pylab.pause(0.1)
         pylab.draw()

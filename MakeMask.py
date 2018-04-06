@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+import sys,os
+if "PYTHONPATH_FIRST" in os.environ.keys() and int(os.environ["PYTHONPATH_FIRST"]):
+    sys.path = os.environ["PYTHONPATH"].split(":") + sys.path
 import os
 import sys
 #sys.path=os.environ["PYTHONPATH"].split(":")+sys.path
