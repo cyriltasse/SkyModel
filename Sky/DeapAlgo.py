@@ -206,7 +206,7 @@ def eaSimple(population, toolbox, cxpb, mutpb, ngen, stats=None,
 #            print logbook.stream        
         T.timeit(iT); iT+=1
 
-        if PlotMachine is not None:
+        if PlotMachine:
             PlotMachine.Plot(halloffame)
         T.timeit(iT); iT+=1
 
