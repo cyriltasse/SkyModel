@@ -23,7 +23,6 @@ import DeapAlgo as algorithms
 from deap import base
 from deap import creator
 from deap import tools
-import pylab
 from scipy.spatial import Voronoi
 import ModVoronoi
 from DDFacet.Other import MyLogger
@@ -224,6 +223,7 @@ class ClassPlotMachine():
         self.PolyCut=PolyCut
 
     def Plot(self,hof):
+        import pylab
         indiv=hof[-1]
         N=indiv.size/2
         xc,yc=indiv.reshape((2,N))

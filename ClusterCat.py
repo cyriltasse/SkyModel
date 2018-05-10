@@ -3,7 +3,6 @@ import sys,os
 if "PYTHONPATH_FIRST" in os.environ.keys() and int(os.environ["PYTHONPATH_FIRST"]):
     sys.path = os.environ["PYTHONPATH"].split(":") + sys.path
 import numpy as np
-import pylab
 from DDFacet.Other import MyLogger
 from DDFacet.Other import MyPickle
 log=MyLogger.getLogger("ClusterImage")
@@ -205,9 +204,9 @@ class ClusterImage():
         l,m=self.radec2lm(self.Cat.ra,self.Cat.dec)
         S=self.Cat.S.copy()
         PolyList=None
+        self.BigPolygon=[]
         if self.AvoidPolygons!="":
             print>>log,"Reading polygon file: %s"%self.AvoidPolygons
-            self.BigPolygon=[]
             PolyList=MyPickle.Load(self.AvoidPolygons)
             LPoly=[]
             inside=np.zeros((l.size,),np.float32)
